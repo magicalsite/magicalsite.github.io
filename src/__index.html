@@ -1,0 +1,136 @@
+@@include("_tpl_layout_head.html", {
+  "title": "Clover Nikhola Khlusov Studio",
+  "pageClass": ""
+})
+@@include("_tpl_layout_header.html", { "currentItem": "Home" })
+
+@@include("_tpl_wbg.html")
+
+<!--MAIN-->
+<main class="h-main">
+  <div class="sections fp-sections-js fp-auto-height-responsive">
+    <section class="main-section fp-section-js">
+      <div class="main-section__layout">
+        <div class="layout-page layout-page-spaces">
+          <div class="main-section__align">
+            <div class="menu js-menu">
+              <div class="menu__list">
+                <div class="menu__item js-menu-item m-active">
+                  @@include("_tpl_menu-el.html", {
+                  "title": ["UX design", "product", "design"],
+                  "text": "We provide a full range of systems to ensure the security of state borders and perimeters. Our C4I solutions will allow you to plan, integrate and create unique border and perimeter protection systems with the management ability from a single Control Center.",
+                  "shortTitle": "UX/UI design"
+                  })
+                </div>
+                <div class="menu__item js-menu-item">
+                  @@include("_tpl_menu-el.html", {
+                  "title": ["Branding", "product", "boo"],
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet aperiam at commodi, deleniti dolorem eaque illum impedit molestiae natus nihil porro possimus quis repellat repellendus rerum similique sunt, ut",
+                  "shortTitle": "Branding"
+                  })
+                </div>
+                <div class="menu__item js-menu-item">
+                  @@include("_tpl_menu-el.html", {
+                  "title": ["Projects", "product", "woo"],
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam beatae distinctio dolores earum eligendi odio pariatur quasi quia quidem quis quisquam recusandae soluta sunt veritatis, voluptates voluptatum. Praesentium, quibusdam",
+                  "shortTitle": "Projects"
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section fp-section-js" id="case-01" data-logo-theme="light" data-bg-color="#282828" data-text-color="#fff">
+      @@include("_tpl_case-section-el.html", {
+      "count": "01",
+      "countMod": "dark-gray",
+      "title": ["Ower", "progekt"],
+      "titleMod": "gray",
+      "subTitle": ["Hurkou", "boxing club", "site"],
+      "imgSrc1": "img/img-case-01-2.png",
+      "imgSrc2": "img/img-case-01-1.png",
+      "btnMoreLineMod": "light-gray",
+      "btnMoreTextMod": "light-gray",
+      "btnMoreArrowMod": "light-gray"
+      })
+    </section>
+
+    <section class="case-section fp-section-js" id="case-02" data-logo-theme="light" data-bg-color="#e02020" data-text-color="#fff">
+      @@include("_tpl_case-section-el.html", {
+      "count": "02",
+      "countMod": "dark-gray",
+      "title": ["Ower", "progekt"],
+      "subTitle": ["Up mutch", "Numerologic", "app"],
+      "imgSrc1": "img/img-case-02.png",
+      "btnMoreLineMod": "light-gray",
+      "btnMoreTextMod": "light-gray",
+      "btnMoreArrowMod": "light-gray"
+      })
+    </section>
+
+    <section class="case-section fp-section-js" id="case-03" data-logo-theme="light" data-bg-color="#463297" data-text-color="#fff">
+      @@include("_tpl_case-section-el.html", {
+      "count": "03",
+      "countMod": "dark-gray",
+      "title": ["Ower", "progekt"],
+      "subTitle": ["Up mutch", "Numerologic", "app"],
+      "complexShade": "true",
+      "imgSrc1": "img/img-case-03.png",
+      "btnMoreLineMod": "light-gray",
+      "btnMoreTextMod": "light-gray",
+      "btnMoreArrowMod": "light-gray"
+      })
+    </section>
+
+    <section class="case-section fp-section-js" id="case-04" data-logo-theme="light" data-bg-color="#79a6dd" data-text-color="#fff">
+      @@include("_tpl_case-section-el.html", {
+      "count": "04",
+      "countMod": "dark-gray",
+      "title": ["Ower", "progekt"],
+      "subTitle": ["Up mutch", "Numerologic", "app"],
+      "imgSrc1": "img/img-case-04.png",
+      "btnMoreLineMod": "light-gray",
+      "btnMoreTextMod": "light-gray",
+      "btnMoreArrowMod": "light-gray"
+      })
+    </section>
+
+    <section class="contacts-section fp-section-js" id="contacts" data-bg-color="#fff">
+      <div class="contacts-section__layout">
+        <div class="layout-page layout-page-spaces">
+          <div class="contacts-section__align">
+            <div class="contacts-section__caption">
+              <div class="contacts-section__title">
+                <span class="mt"><span class="mst">Hello, our</span></span>
+                <span class="mt"><span class="mst">contacts. <em class="icon-peace"></em></span></span>
+              </div>
+            </div>
+            <div class="contacts-section__content">
+              <div class="contacts-section__address">
+                <div class="address">
+                  <span class="mt"><span class="mst">Minsk. Belarus</span></span>
+                  <span class="mt"><span class="mst">Oktiyabrskaya st 25</span></span>
+                </div>
+              </div>
+              <div class="contacts-section__cont-list">
+                <div class="cont-list">
+                  <div class="cont-list__item"><a href="tel:+375447735877" class="cont-list__link">+375 (44) 773-58-77</a></div>
+                  <div class="cont-list__item">Mail: <a href="mailto:Info@clover.by" class="cont-list__link">Info@clover.by</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    @@include("_tpl_layout_footer.html", { "addClass": "h-main__footer fp-section-js" })
+  </div>
+</main>
+<!--MAIN end-->
+
+
+@@include("_tpl_layout_foot.html")
