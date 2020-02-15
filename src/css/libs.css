@@ -1,5 +1,5 @@
 /*!
- * fullPage 3.0.7
+ * fullPage 3.0.8
  * https://github.com/alvarotrigo/fullPage.js
  *
  * @license GPLv3 for open source use only
@@ -900,7 +900,7 @@ html.fp-enabled {
   border-color: #5897fb;
 }
 /**
- * Swiper 4.5.1
+ * Swiper 4.5.3
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/
  *
@@ -908,7 +908,7 @@ html.fp-enabled {
  *
  * Released under the MIT License
  *
- * Released on: September 13, 2019
+ * Released on: October 16, 2019
  */
 
 .swiper-container {

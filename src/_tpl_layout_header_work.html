@@ -7,17 +7,14 @@
 
 <!--HEADER-->
 <header class="header@@if(context.currentItem == 'Home'){ header_fixed}">
-  <div class="layout-page layout-page-spaces">
+  <div class="layout-page wrapper-hurkou layout-page-spaces">
     <div class="header-container">
       <div class="header-container__left">
-        <div class="logo">
-          <div class="logo_dark"></div>
-          <div class="logo_light"></div>
-          @@if(context.currentItem === "Home"){<span class="logo-js"><span>Clover Nikhola Khlusov Studio</span></span>}
-          @@if(context.currentItem !== "Home"){<a href="index.html" title="Go home"><span>Clover Nikhola Khlusov Studio</span></a>}
-          <!--logo for a print version-->
-          <img style="display: none;" src="img/logo.svg" alt="Print version logotype">
-        </div>
+        
+          <a href="index.html" title="Go home">
+            <div class="logotype"></div>
+          </a>
+       
       </div>
 
       <div class="header-container__right">
@@ -30,19 +27,19 @@
           </div>
           <nav class="nav">
             <ul class="nav__list nav-js">
-              @@if(context.currentItem != 'Home'){<li><a href="index.html">Home</a></li>}
+              @@if(context.currentItem != 'Home'){<li><a href="index.html" class="nav__list_item">Home</a></li>}
 
-              @@if(context.currentItem == 'About'){<li class="current"><span>About</span></li>}
-              @@if(context.currentItem != 'About'){<li><a href="inner.html">About</a></li>}
+              @@if(context.currentItem == 'About'){<li class="current"><span class="nav__list_item">About</span></li>}
+              @@if(context.currentItem != 'About'){<li><a href="inner.html" class="nav__list_item">About</a></li>}
 
-              @@if(context.currentItem == 'Work'){<li class="current"><span>Work</span>}
-              @@if(context.currentItem != 'Work'){<li><a href="inner.html">Work</a></li>}
+              @@if(context.currentItem == 'Work'){<li class="current"><span class="nav__list_item">Work</span>}
+              @@if(context.currentItem != 'Work'){<li><a href="inner.html" class="nav__list_item">Work</a></li>}
             </ul>
           </nav>
         </div>
         <div class="nav-overlay"></div>
       </div>
-      <div class="lang">
+      <div class="lang lang__work">
         <a class="lang__inner" href="#"><span>Ru</span></a>
       </div>
     </div>

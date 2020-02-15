@@ -201,7 +201,7 @@ gulp.task('browserSync', function (done) {
 /**
  * @description Таск наблюдения за изменением файлов
  */
-gulp.task('watch', function () {
+gulp.task('watch', ['createCustomModernizr', 'browserSync', 'html:buildAllPages', 'sassCompilation', 'mergeCssLibs', 'copyLibsScriptsToJs'], function () {
   gulp.watch(['src/_tpl_*.html', 'src/__*.html', 'src/includes/**/*.json', 'src/includes/**/*.html', 'src/includes/**/*.svg'], ['html:buildAllPages']);
   gulp.watch('src/sass/**/*.+(scss|sass)', ['sassCompilation']);
 });

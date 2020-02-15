@@ -973,6 +973,14 @@
     opacity: 0.06;
     margin-top: 14.1rem;
   }
+
+  // &:nth-child(4) {
+  //   margin-left: calc(3 * (1em + 0.63em));
+  //   opacity: 1 !important;
+  //   color: red;
+  //   font-size: 21.7rem;
+  //   margin-top: 27.3rem;
+  // }
 }
 
 .wbg__inner {
@@ -1899,3 +1907,137 @@
 }
 
 /* article share end */
+
+/* ==================================== */
+/* ============ HURKOU ============ */
+/* ==================================== */
+
+.hurkou_body {
+  background-color: #282828;
+}
+
+.nav__list li .nav__list_item {
+  color: #7A7A7A;
+}
+.logotype {
+  background: url(../../img/logo-alt.svg) no-repeat;
+  height: 60px;
+}
+.wbg__list_hurkou .wbg__item {
+  opacity: 0.03;
+}
+.wbg__list_hurkou {
+  & .wbg__item {
+    left: 6px;
+  }
+  &  .wbg__item:nth-child(1) {
+      font-size: 282px;
+      margin-top: -11.3rem;
+    }
+  & .wbg__item:nth-child(2) {
+    color: #363636;
+    opacity: 0.5;
+    font-size: 267px;
+    margin-top: 2rem;
+  }
+  & .wbg__item:nth-child(3) {
+    font-size: 282px;
+    margin-top: -95.7rem;
+    left: -8px;
+  }
+}
+
+.hurkou__main {
+  display: flex;
+  padding-bottom: 69px;
+  justify-content: space-between;
+
+  &_number {
+    margin-top: 130px;
+    margin-left: 9px;
+    font-size: 23px;
+    line-height: 34px;
+    color: #333333;
+  }
+  &_title {
+    @include font-bold;
+    font-size: 73px;
+    line-height: 75px;
+    color: #919191;
+    margin-top: 17px;
+    line-height: 75px;
+  }
+}
+.hurkou-section_circle {
+  height: 517px;
+  width: 517px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px -5px 100px rgba(255, 255, 255, 0.5);
+  margin-top: 65px;
+  margin-right: 60px;
+  position: relative;
+}
+.hurkou-section_subtitle {
+  position: absolute;
+    top: -20px;
+    right: 14px;
+}
+.hurkou-section_man {
+  position: absolute;
+  top: -59px;
+  left: 9px;
+}
+.hurkou__video {
+  position: relative;
+  z-index: 2;
+  background: #1C1B1B;
+  padding: 115px 0 125px 0;
+}
+.hurkou__video_wrapper {
+  display: flex;
+  justify-content: center;
+}
+.hurkou__video_place img {
+  box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.5);
+  border: 9px solid #000;
+  border-radius: 7px;
+}
+.rectangle {
+  width: 4px;
+  height: 203px;
+  background: #D8D8D8;
+  border-radius: 5px;
+  position: absolute;
+  right: -30px;
+  top: calc(50% - 101.5px);
+}
+
+ .wrapper-hurkou {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.lang__work {
+  margin: 0 0 0 auto;
+}
+.wbg__hurkou {
+  left: 84px;
+}
+.hurkou_subtitle {
+  transform: rotate(90deg);
+  position: absolute;
+  left: 624px;
+  top: 169px;
+  z-index: 3;
+  @include font-bold;
+  font-size: 282px;
+  line-height: 1;
+  opacity: 0.03;
+  color: #000;
+  white-space: nowrap;
+  cursor: default;
+  text-transform: uppercase;
+  transform-origin: left top;
+  pointer-events: none;
+}
