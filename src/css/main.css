@@ -2960,7 +2960,8 @@ form .success + .select-arrow + .error-feedback + .success-feedback {
   }
 }
 
-.nav__list, .nav__list ul {
+.nav__list,
+.nav__list ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -3258,7 +3259,8 @@ li.hover > em {
   }
 }
 
-.nav__list > li > a::before, .nav__list > li > span::before {
+.nav__list > li > a::before,
+.nav__list > li > span::before {
   content: "";
   display: block;
   position: absolute;
@@ -3281,7 +3283,8 @@ li.hover > em {
 }
 
 @media (max-width: 991px) {
-  .nav__list > li > a::before, .nav__list > li > span::before {
+  .nav__list > li > a::before,
+  .nav__list > li > span::before {
     content: none;
   }
 }
@@ -4485,6 +4488,9 @@ html.no-js
   font-size: 23px;
   line-height: 34px;
   color: #333333;
+  transition: opacity 0.6s 1.5s;
+  opacity: 0;
+  position: static;
 }
 
 .hurkou__main_title {
@@ -4497,6 +4503,10 @@ html.no-js
   line-height: 75px;
 }
 
+.hurkou-section__figure {
+  position: relative;
+}
+
 .hurkou-section_circle {
   height: 517px;
   width: 517px;
@@ -4505,13 +4515,45 @@ html.no-js
   box-shadow: 0px -5px 100px rgba(255, 255, 255, 0.5);
   margin-top: 65px;
   margin-right: 60px;
-  position: relative;
+  transition-property: transform, opacity;
+  transition-duration: 0.7s;
+  transition-delay: 0.8s;
+  transition-timing-function: ease-in-out;
+  -ms-transform: scale(0.25, 0.25);
+      transform: scale(0.25, 0.25);
+  transform: scale3d(0.25, 0.25, 1);
+  opacity: 0;
+}
+
+.s-ready .hurkou-section_circle {
+  opacity: 1;
+  -ms-transform: scale(1, 1);
+      transform: scale(1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+.dop_animate {
+  transition-property: transform, opacity;
+  transition-duration: 0.7s;
+  transition-delay: 1.3s;
+  transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+  -ms-transform: scale(0.85, 0.85);
+      transform: scale(0.85, 0.85);
+  transform: scale3d(0.85, 0.85, 1);
+  opacity: 0;
+}
+
+.s-ready .dop_animate {
+  opacity: 1;
+  -ms-transform: scale(1, 1);
+      transform: scale(1, 1);
+  transform: scale3d(1, 1, 1);
 }
 
 .hurkou-section_subtitle {
   position: absolute;
   top: -20px;
-  right: 14px;
+  right: 75px;
 }
 
 .hurkou-section_man {
@@ -4546,8 +4588,14 @@ html.no-js
   background: #D8D8D8;
   border-radius: 5px;
   position: absolute;
-  right: -30px;
+  right: 14px;
   top: calc(50% - 101.5px);
+  transition: opacity 0.6s 1.5s;
+  opacity: 0;
+}
+
+.s-ready .rectangle {
+  opacity: 1;
 }
 
 .wrapper-hurkou {

@@ -73,7 +73,7 @@
   }
 
   a,
-  & > span {
+  &>span {
     position: absolute;
     left: 0;
     top: 0;
@@ -83,7 +83,7 @@
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 
-    & > span {
+    &>span {
       @include hide-text;
     }
   }
@@ -210,14 +210,18 @@
     text-align: left;
     background-color: rgba($base-color, 0.9);
     z-index: 999;
+
     transition: {
       property: opacity, visibility, transform;
       duration: $animation-speed;
-    };
+    }
+
+    ;
 
     // hide
     opacity: 0;
-    $translate: -100%, 0;
+    $translate: -100%,
+    0;
     transform: translate($translate);
     transform: translate3d($translate, 0);
   }
@@ -231,6 +235,7 @@
   }
 
   &.is-open {
+
     // ------ бутерброд -----------------------------------------
     @include media("<tab") {
       opacity: 1;
@@ -263,7 +268,7 @@
   }
 }
 
-.nav-wrap.is-open ~ .nav-overlay {
+.nav-wrap.is-open~.nav-overlay {
   opacity: 1;
   pointer-events: auto;
 }
@@ -411,7 +416,7 @@
   color: $text-color;
   text-align: left;
   transition: color 0.7s;
-  
+
   .logo-theme-light & {
     color: #fff;
   }
@@ -427,7 +432,8 @@
   }
 
   // Все ul
-  &, & ul {
+  &,
+  & ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -456,7 +462,7 @@
   // Все "a" и "span"
   // "a" заменять на "span" в пункте текущей страницы
   a,
-  li > span {
+  li>span {
     //display: block;
     display: inline-block;
     vertical-align: top;
@@ -488,8 +494,9 @@
 
   // Пункты, в которых есть подменю
   li.has-sub {
-    & > a,
-    & > span {
+
+    &>a,
+    &>span {
       padding-right: $nav-arrow-size;
 
       // ------ бутерброд -----------------------------------------
@@ -585,11 +592,13 @@
 
     // Hover
     li {
+
       // Класс .hover добавляется скриптом
       &.hover,
       .no-js &:hover {
-        & > a,
-        & > span {
+
+        &>a,
+        &>span {
           color: $highlight-color;
         }
       }
@@ -597,8 +606,9 @@
 
     // Current
     li.current {
-      & > a,
-      & > span {
+
+      &>a,
+      &>span {
         color: $highlight-color;
 
         @include media('<tab') {
@@ -609,22 +619,23 @@
 
     // Current Hover
     li.current.hover {
-      & > a {
+      &>a {
         color: white;
       }
     }
   }
 
   // Для текущей страницы
-  li.current > ul {
+  li.current>ul {
     display: block;
   }
 
   // Показать подменю.
   // Класс .hover добавляется скриптом.
   // Если отключены скрипты, Показывать через :hover.
-  li.hover > ul,
-  .no-js & li:hover > ul {
+  li.hover>ul,
+  .no-js & li:hover>ul {
+
     // Для разрешений выше планшетных
     @include media(">=tab") {
       opacity: 1;
@@ -635,7 +646,7 @@
   }
 
   // Стрелка для разворачивания подменю.
-  li > em {
+  li>em {
     position: absolute;
     top: 50%;
     right: 0;
@@ -687,7 +698,7 @@
 
     @at-root {
       @include media("<tab") {
-        li.is-open > em {
+        li.is-open>em {
           transform: rotate(180deg);
         }
       }
@@ -705,12 +716,12 @@
 
     // Open, Hover
     @at-root {
-      li.hover > em {
+      li.hover>em {
         transform: rotate(90deg);
       }
 
       @include media("<tab") {
-        li.is-open > em {
+        li.is-open>em {
           transform: rotate(180deg);
         }
       }
@@ -718,7 +729,7 @@
   }
 
   // li ПЕРВОГО уровня
-  & > li {
+  &>li {
     margin: 0 0.6rem;
     //@include font-bold;
     letter-spacing: 0.12em;
@@ -732,6 +743,7 @@
     }
 
     &:first-child {
+
       // ------ бутерброд -----------------------------------------
       @include media("<tab") {
         border-top: none;
@@ -749,7 +761,8 @@
 
     // Все "a" и "span" первого уровня
     // "a" заменять на "span" в пункте текущей страницы
-    & > a, & > span {
+    &>a,
+    &>span {
       &::before {
         content: "";
         display: block;
@@ -769,6 +782,7 @@
         backface-visibility: hidden;
         $prop: transform, opacity;
         will-change: $prop;
+
         transition: {
           property: $prop;
           duration: $animation-speed;
@@ -784,7 +798,7 @@
     }
 
     // Стрелка для разворачивания подменю
-    & > em {
+    &>em {
       // Если стили стрелок первого уровня навигаци отличаются, от остальных
       display: none;
 
@@ -798,7 +812,7 @@
     // Класс .hover добавляется скриптом
     &.hover,
     .no-js &:hover {
-      & > a {
+      &>a {
         &::before {
           transform-origin: 0 100%;
 
@@ -812,8 +826,9 @@
     // Пункт для текущей страницы
     // Current
     &.current {
-      & > a,
-      & > span {
+
+      &>a,
+      &>span {
         //@include font-bold;
         position: relative;
         z-index: 1;
@@ -1102,13 +1117,16 @@
         @include antialiased;
         $prop: transform;
         will-change: $prop;
+
         transition: {
           property: $prop;
           duration: 0.8s;
           delay: 1.6s;
           timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
         }
-        $translate: 0, 120%;
+
+        $translate: 0,
+        120%;
         transform: translate($translate);
         transform: translate3d($translate, 0);
       }
@@ -1208,13 +1226,16 @@
         @include antialiased;
         $prop: transform;
         will-change: $prop;
+
         transition: {
           property: $prop;
           duration: 0.8s;
           delay: 1.5s;
           timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
         }
-        $translate: 0, 120%;
+
+        $translate: 0,
+        120%;
         transform: translate($translate);
         transform: translate3d($translate, 0);
       }
@@ -1241,6 +1262,7 @@
       display: block;
       $prop: transform;
       will-change: $prop;
+
       transition: {
         property: $prop;
         duration: 0.5s;
@@ -1261,13 +1283,16 @@
   @include antialiased;
   $prop: transform;
   will-change: $prop;
+
   transition: {
     property: $prop;
     duration: 1.0s;
     delay: 1.2s;
     timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
   }
-  $translate: 0, 102%;
+
+  $translate: 0,
+  102%;
   transform: translate($translate);
   transform: translate3d($translate, 0);
 
@@ -1305,12 +1330,15 @@
     background-color: currentColor;
     $prop: transform;
     will-change: $prop;
+
     transition: {
       property: $prop;
       duration: 0.5s;
       timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
     }
-    $translate: -102%, 0;
+
+    $translate: -102%,
+    0;
     transform: translate($translate);
     transform: translate3d($translate, 0);
   }
@@ -1507,14 +1535,17 @@
       border-radius: 50%;
       $prop: transform, opacity;
       will-change: $prop;
+
       transition: {
         property: $prop;
         duration: 0.7s;
         delay: 0.8s;
         timing-function: ease-in-out;
       }
+
       opacity: 0;
-      $scale: 0.25, 0.25;
+      $scale: 0.25,
+      0.25;
       transform: scale($scale);
       transform: scale3d($scale, 1);
 
@@ -1541,13 +1572,16 @@
         border-radius: 50%;
         $prop: transform, opacity;
         will-change: $prop;
+
         transition: {
           property: $prop;
           duration: 0.7s;
           timing-function: ease-in-out;
         }
+
         opacity: 0;
-        $scale: 0.25, 0.25;
+        $scale: 0.25,
+        0.25;
         transform: scale($scale);
         transform: scale3d($scale, 1);
       }
@@ -1613,14 +1647,18 @@
       opacity: 0;
       $prop: transform, opacity;
       will-change: $prop;
+
       transition: {
         property: $prop;
         duration: 0.7s;
         delay: 1.3s;
         timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
       }
-      $translate: -50%, -50%;
-      $scale: 0.85, 0.85;
+
+      $translate: -50%,
+      -50%;
+      $scale: 0.85,
+      0.85;
       transform: translate($translate) scale($scale);
       transform: translate3d($translate, 0) scale3d($scale, 1);
 
@@ -1655,13 +1693,16 @@
   @include antialiased;
   $prop: transform, opacity;
   will-change: $prop;
+
   transition: {
     property: $prop;
     duration: 1.0s;
     delay: 0.8s;
     timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
   }
-  $translate: 0, 120%;
+
+  $translate: 0,
+  120%;
   transform: translate($translate);
   transform: translate3d($translate, 0);
 
@@ -1692,7 +1733,7 @@
   @include font-bold;
   font-size: 1.8rem;
   line-height: 1.44;
-  color:$text-color;
+  color: $text-color;
   opacity: 0;
   transition: opacity 1s 0.8s;
 
@@ -1893,7 +1934,7 @@
       filter: grayscale(0);
     }
 
-    & > span {
+    &>span {
       @include hide-text;
     }
 
@@ -1919,27 +1960,33 @@
 .nav__list li .nav__list_item {
   color: #7A7A7A;
 }
+
 .logotype {
   background: url(../../img/logo-alt.svg) no-repeat;
   height: 60px;
 }
+
 .wbg__list_hurkou .wbg__item {
   opacity: 0.03;
 }
+
 .wbg__list_hurkou {
   & .wbg__item {
     left: 6px;
   }
-  &  .wbg__item:nth-child(1) {
-      font-size: 282px;
-      margin-top: -11.3rem;
-    }
+
+  & .wbg__item:nth-child(1) {
+    font-size: 282px;
+    margin-top: -11.3rem;
+  }
+
   & .wbg__item:nth-child(2) {
     color: #363636;
     opacity: 0.5;
     font-size: 267px;
     margin-top: 2rem;
   }
+
   & .wbg__item:nth-child(3) {
     font-size: 282px;
     margin-top: -95.7rem;
@@ -1958,7 +2005,14 @@
     font-size: 23px;
     line-height: 34px;
     color: #333333;
+    transition: opacity 0.6s 1.5s;
+    opacity: 0;
+    position: static;
+    // &_ready {
+    //   opacity: 1;
+    // }
   }
+
   &_title {
     @include font-bold;
     font-size: 73px;
@@ -1968,6 +2022,11 @@
     line-height: 75px;
   }
 }
+
+.hurkou-section__figure {
+  position: relative;
+}
+
 .hurkou-section_circle {
   height: 517px;
   width: 517px;
@@ -1976,54 +2035,106 @@
   box-shadow: 0px -5px 100px rgba(255, 255, 255, 0.5);
   margin-top: 65px;
   margin-right: 60px;
-  position: relative;
+  $prop: transform, opacity;
+  transition: {
+    property: $prop;
+    duration: 0.7s;
+    delay: 0.8s;
+    timing-function: ease-in-out;
+  }
+  $scale: 0.25, 0.25;
+  transform: scale($scale);
+  transform: scale3d($scale, 1);
+  opacity: 0;
+
+  .s-ready & {
+    opacity: 1;
+    $scale: 1, 1;
+    transform: scale($scale);
+    transform: scale3d($scale, 1);
+  }
 }
+
+.dop_animate {
+  $prop: transform, opacity;
+  transition: {
+    property: $prop;
+    duration: 0.7s;
+    delay: 1.3s;
+    timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+  $scale: 0.85, 0.85;
+  transform: scale($scale);
+  transform: scale3d($scale, 1);
+  opacity: 0;
+
+  .s-ready & {
+    opacity: 1;
+    $scale: 1, 1;
+    transform: scale($scale);
+    transform: scale3d($scale, 1);
+  }
+}
+
 .hurkou-section_subtitle {
   position: absolute;
-    top: -20px;
-    right: 14px;
+  top: -20px;
+  right: 75px;
 }
+
 .hurkou-section_man {
   position: absolute;
   top: -59px;
   left: 9px;
 }
+
 .hurkou__video {
   position: relative;
   z-index: 2;
   background: #1C1B1B;
   padding: 115px 0 125px 0;
 }
+
 .hurkou__video_wrapper {
   display: flex;
   justify-content: center;
 }
+
 .hurkou__video_place img {
   box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.5);
   border: 9px solid #000;
   border-radius: 7px;
 }
+
 .rectangle {
   width: 4px;
   height: 203px;
   background: #D8D8D8;
   border-radius: 5px;
   position: absolute;
-  right: -30px;
+  right: 14px;
   top: calc(50% - 101.5px);
+  transition: opacity 0.6s 1.5s;
+  opacity: 0;
+  .s-ready & {
+    opacity: 1;
+  }
 }
 
- .wrapper-hurkou {
+.wrapper-hurkou {
   width: 100%;
   max-width: 1220px;
   margin: 0 auto;
 }
+
 .lang__work {
   margin: 0 0 0 auto;
 }
+
 .wbg__hurkou {
   left: 84px;
 }
+
 .hurkou_subtitle {
   transform: rotate(90deg);
   position: absolute;

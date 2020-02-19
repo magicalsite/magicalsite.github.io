@@ -5,13 +5,14 @@
 
     @@include("_tpl_layout_header_work.html", { "currentItem": "Hurkou" })
 
-    <div class="wbg wbg__hurkou">
+    <!-- <div class="wbg wbg__hurkou">
         <div class="wbg__list wbg__list_hurkou">
           @@include("_tpl_wbg-items.html", {
           "words": ["UX/UI DESIGN", "Branding", "UX/UI DESIGN", "UX/UI DESIGN"]
           })
         </div>
-      </div>
+      </div> -->
+      @@include("_tpl_wbg.html")
 
         @@include("_tpl_case-section-el_hurkou.html", {
             "count": "01"
@@ -23,6 +24,21 @@
                 <img src="./img/main-hurkou.png" alt="hurkou video">
             </div>
         </div>
+      </section>
+
+      <section class="case-section fp-section-js fp-section  s-visible active fp-completely" id="case-01" data-logo-theme="light" data-bg-color="#282828" data-text-color="#fff">
+        @@include("_tpl_case-section-el.html", {
+        "count": "01",
+        "countMod": "dark-gray",
+        "title": ["Ower", "progekt"],
+        "titleMod": "gray",
+        "subTitle": ["Hurkou", "boxing club", "site"],
+        "imgSrc1": "img/img-case-01-2.png",
+        "imgSrc2": "img/img-case-01-1.png",
+        "btnMoreLineMod": "light-gray",
+        "btnMoreTextMod": "light-gray",
+        "btnMoreArrowMod": "light-gray"
+        })
       </section>
 
     

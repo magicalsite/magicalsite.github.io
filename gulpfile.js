@@ -149,6 +149,17 @@ gulp.task('createCustomModernizr', function (done) {
   });
 });
 
+
+
+/**
+ * @description Таск для копирования jquery в js папку
+ */
+gulp.task('copyJqueryToJs', function () {
+  return gulp.src([
+    'src/libs/jquery/dist/jquery.min.js'
+  ])
+      .pipe(gulp.dest('src/js'));
+});
 /**
  * @description Таск для мераж js библиотек
  */
@@ -162,8 +173,7 @@ gulp.task('copyLibsScriptsToJs', ['copyJqueryToJs'], function () {
     , 'src/libs/select2/dist/js/i18n/ru.js' // локализация для кастомного селекта
     , 'node_modules/object-fit-images/dist/ofi.min.js' // object-fit fix for non-support browsers
     , 'src/libs/swiper/dist/js/swiper.min.js' // swiper
-    , 'src/js/temp/jquery.nav.js' // nav
-    , 'src/js/temp/jquery.switch-class.js' // switch class
+    , 'src/_temp/jquery.nav.js' // nav and switch class
     , 'node_modules/mobile-detect/mobile-detect.min.js' // mobile detect
   ])
       .pipe(concat('libs.js'))
@@ -173,15 +183,7 @@ gulp.task('copyLibsScriptsToJs', ['copyJqueryToJs'], function () {
       .pipe(gulp.dest('src/js'));
 });
 
-/**
- * @description Таск для копирования jquery в js папку
- */
-gulp.task('copyJqueryToJs', function () {
-  return gulp.src([
-    'src/libs/jquery/dist/jquery.min.js'
-  ])
-      .pipe(gulp.dest('src/js'));
-});
+
 
 /**
  * @description Таск browserSync

@@ -358,6 +358,7 @@ $WINDOW.on('load', function () {
   $HTML.addClass('page-loaded');
   $('.js-p-preloader').addClass('p-preloader_hide');
   $('.js-article').addClass('article-ready');
+  $('.wrapper-hurkou').addClass('s-ready');
 });
 
 $(document).ready(function () {
