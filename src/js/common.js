@@ -350,6 +350,25 @@ function formValidation() {
   }
 }
 
+/**
+ * !Parallax
+ * */
+function scrollBanner() {
+  $(document).scroll(function(){
+      var scrollPos = $(this).scrollTop();
+      var transY = scrollPos / 2 + 'px';
+      $('.bg-title').css({'transform':'translateY(' + transY + ') rotate(90deg) '});
+  });
+}
+function scrollBannerUX() {
+  $(document).scroll(function(){
+      var scrollPos = $(this).scrollTop();
+      var transY = scrollPos / 3 + 'px';
+      $('.bg-title-ux').css({'transform':'translateY(' + transY + ') rotate(90deg) '});
+  });
+}
+
+
 $WINDOW.on('resize', function () {
   changeFontSize();
 });
@@ -374,4 +393,8 @@ $(document).ready(function () {
   toggleActiveMenuItem();
 
   formValidation();
+
+  //Parallax
+  scrollBanner();
+  scrollBannerUX();
 });

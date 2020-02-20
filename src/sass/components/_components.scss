@@ -2090,7 +2090,7 @@
 
 .hurkou__video {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   background: #1C1B1B;
   padding: 115px 0 125px 0;
 }
@@ -2133,6 +2133,9 @@
 
 .wbg__hurkou {
   left: 84px;
+  overflow: visible;
+  position: absolute;
+  width: auto;
 }
 
 .hurkou_subtitle {
