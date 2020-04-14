@@ -22,3 +22,8 @@
 @include font-face("circe-regular", "../fonts/Circe/Circe-Regular", normal, normal, ttf);
 @include font-face("circe-bold", "../fonts/Circe/Circe-Bold", normal, normal, ttf);
 @include font-face("circe-extra-bold", "../fonts/Circe/Circe-ExtraBold", normal, normal, ttf);
+
+// BebasNeue
+// ----------------------------------------------------
+@include font-face("circe-light", "../fonts/BebasNeue/BebasNeue-light", normal, normal, ttf);
+@include font-face("circe-regular", "../fonts/BebasNeue/BebasNeue-regular", normal, normal, ttf);
