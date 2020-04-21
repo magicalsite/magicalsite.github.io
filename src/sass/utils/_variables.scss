@@ -25,11 +25,16 @@ $breakpoints: (
 
 // Main font
 // ----------------------------------------------------
+$font-norm-reg: "avenir-next-cyr-regular", Helvetica, Arial, sans-serif !default;
 $font-norm: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif !default;
 $font-italic: "avenir-next-cyr-medium-italic", Helvetica, Arial, sans-serif !default;
 $font-bold: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif !default;
 $font-bold-italic: "avenir-next-cyr-bold-italic", Helvetica, Arial, sans-serif !default;
 $font-demi: "avenir-next-cyr-demi", Helvetica, Arial, sans-serif !default;
+
+@mixin font-norm-reg {
+  font-family: $font-norm-reg;
+}
 
 @mixin font-normal {
   font-family: $font-norm;

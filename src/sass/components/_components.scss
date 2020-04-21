@@ -13,6 +13,28 @@
   background-image: url(../../img/icon-peace.png);
   background-size: contain;
 }
+.icon-phone {
+  display: inline-block;
+  height: 1.33rem;
+  width: 1.33rem;
+  font-size: 0;
+  line-height: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../img/icon-phone.svg);
+  background-size: contain;
+}
+.icon-telegram {
+  display: inline-block;
+  height: 1.33rem;
+  width: 1.33rem;
+  font-size: 0;
+  line-height: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../img/icon-telegram.svg);
+  background-size: contain;
+}
 
 /* ==================================== */
 /* ============== HEADER ============== */
@@ -97,7 +119,7 @@
     width: 100%;
     pointer-events: none;
     background-repeat: no-repeat;
-    background-position: 50%;
+    //background-position: 50%;
     background-size: contain;
     will-change: transform;
     transition: transform 0.8s;
@@ -139,7 +161,7 @@
   line-height: 2.6rem;
   text-align: center;
   text-transform: uppercase;
-  margin: 0 -2.5rem 0 auto;
+  margin: 0 0 0 auto;
 
   &__inner {
     height: 2.6rem;
@@ -921,6 +943,27 @@
     height: 100%;
     padding: 0 0 3.4rem;
   }
+
+  &__footer {
+    &-site {
+      font-family: 'Roboto';
+      font-size: 12px;
+      line-height: 37px;
+      
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      
+      color: #BBBBBB;
+      
+    }
+    &-network {
+      display: flex;
+      justify-content: space-between;
+      li {
+        margin-right: 10px;
+      }
+    }
+  }
 }
 
 .h-main {
@@ -1033,22 +1076,26 @@
     position: relative;
     height: 100%;
   }
+
+  &__footer {
+    width: 90%;
+    position: absolute;
+    bottom: 28px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    
+    & a {
+      margin-right: 10px;
+    }
+  }
 }
 
 /* main section end */
 
 /* menu */
 .menu {
-  position: relative;
-  height: 100%;
-
-  &__list {
-    position: relative;
-    display: flex;
-    counter-reset: item;
-    height: 100%;
-  }
-
+  
   &__item {
     counter-increment: item;
     position: static;
@@ -1057,12 +1104,6 @@
     max-width: $width;
     height: 100%;
     pointer-events: none;
-
-    &:first-child {
-      $width: 18.2rem;
-      flex: 1 0 $width;
-      max-width: $width;
-    }
 
     .m-active & {
       pointer-events: auto;
@@ -1101,8 +1142,8 @@
       display: block;
       overflow: hidden;
       //pointer-events: none;
-      margin: 0 0 2.7rem 0.6rem;
-      @include font-alt-normal;
+      margin: 0 0 0.83rem 0.6rem;
+      @include font-norm-reg;
       font-size: 2.3rem;
       line-height: 1;
       will-change: opacity;
@@ -1155,6 +1196,7 @@
       flex: 1 0 $width;
       max-width: $width;
       padding-right: 2rem;
+      padding-left: 37px;
     }
 
     &-title {
@@ -1193,7 +1235,7 @@
     }
 
     &-description {
-      $width: 32%;
+      $width: 26.5%;
       flex: 1 0 $width;
       max-width: $width;
       margin: 1.7rem 0 0;
@@ -1206,6 +1248,15 @@
       .s-ready .m-active & {
         opacity: 1;
       }
+    }
+
+    &-rect {
+      width: 0.33rem;
+      height: 16.9rem;
+      background-color: #D8D8D8;
+      border-radius: 5px;
+      align-self: center;
+      margin-left: auto;
     }
   }
 
@@ -1439,6 +1490,13 @@
       color: #919191;
     }
 
+    &_whiteone {
+      color: rgba(255, 255, 255, 0.3);
+    }
+    &_whitetwo {
+      color: rgba(255, 255, 255, 0.44);
+    }
+
     &_light-gray {
       color: #d8d8d8;
     }
@@ -1463,12 +1521,21 @@
     }
   }
 
+  &__technologies {
+  @include font-demi;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: #fff;
+  opacity: 0.38;
+  }
+
   &__description {
     position: relative;
     $width: 26.3%;
     flex: 1 0 $width;
     max-width: $width;
-    padding: 5.3rem 2rem 0 0;
+    padding: 0 2rem 0 0;
 
     &_gray {
       color: #919191;
@@ -1478,8 +1545,8 @@
   &__sub-title {
     margin: 0 0 1.8rem;
     @include font-important-bold;
-    font-size: 3.6rem;
-    line-height: 4.5rem;
+    font-size: 3rem;
+    line-height: 3.75rem;
     color: white;
 
     &_gray {
@@ -1488,7 +1555,7 @@
   }
 
   &__more {
-    width: 19.5rem;
+    width: 12.75rem;
     max-width: 100%;
   }
 
@@ -1676,6 +1743,15 @@
       }
     }
   }
+
+  &__rectangle {
+    width: 0.33rem;
+    height: 17rem;
+    background: #D8D8D8;
+    border-radius: 0.41rem;
+    position: relative;
+    left: 14px;
+  }
 }
 
 .ct,
@@ -1730,7 +1806,7 @@
 
 /* cont-list */
 .cont-list {
-  @include font-bold;
+  @include font-demi;
   font-size: 1.8rem;
   line-height: 1.44;
   color: $text-color;
@@ -1752,9 +1828,23 @@
     color: inherit;
     box-shadow: inset 0 0 0 currentColor;
     transition: box-shadow $animation-speed;
+    margin-left: 2.4rem;
+
+    &_first {
+      color: #AEAEAE;
+    }
+    &_second {
+      @include font-bold;
+      color: #3F3F3F;
+    }
 
     &:hover {
       box-shadow: inset 0 -0.1em 0 currentColor;
+    }
+
+    &_dp {
+      color: #0076E2;
+      box-shadow: inset 0 -0.1em 0 #0076E2;
     }
   }
 }

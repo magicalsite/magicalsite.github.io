@@ -11,6 +11,7 @@
 
 // Avenir Next
 // ----------------------------------------------------
+@include font-face("avenir-next-cyr-regular", "../fonts/AvenirNextCyr/AvenirNextCyr-Regular", normal, normal, eot ttf woff);
 @include font-face("avenir-next-cyr-medium", "../fonts/AvenirNextCyr/AvenirNextCyr-Medium", normal, normal, eot ttf woff);
 @include font-face("avenir-next-cyr-medium-italic", "../fonts/AvenirNextCyr/AvenirNextCyr-MediumItalic", normal, normal, eot ttf woff);
 @include font-face("avenir-next-cyr-bold", "../fonts/AvenirNextCyr/AvenirNextCyr-Bold", normal, normal, eot ttf woff);
@@ -25,5 +26,5 @@
 
 // BebasNeue
 // ----------------------------------------------------
-@include font-face("circe-light", "../fonts/BebasNeue/BebasNeue-light", normal, normal, ttf);
-@include font-face("circe-regular", "../fonts/BebasNeue/BebasNeue-regular", normal, normal, ttf);
+@include font-face("bebasneue-light", "../fonts/BebasNeue/BebasNeue-light", normal, normal, ttf);
+@include font-face("bebasneue-regular", "../fonts/BebasNeue/BebasNeue-regular", normal, normal, ttf);

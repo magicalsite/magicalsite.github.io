@@ -3,10 +3,17 @@
 @import "../../libs/include-media/dist/include-media";
 
 .btn-more-c {
-  $height: 2.6rem;
-  height: $height;
-  position: relative;
-  display: block;
+  background: rgba(185, 185, 185, 0.3);
+  backdrop-filter: blur(20px);
+  border-radius: 0.4rem;
+  padding: 1.25rem 4.58rem;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  @include font-important-bold;
+  font-size: 1.16rem;
+  line-height: 3.75rem;
+  color: #FFFFFF;
 }
 
 .btn-more-c__line {

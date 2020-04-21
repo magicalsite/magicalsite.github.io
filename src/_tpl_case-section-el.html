@@ -11,6 +11,9 @@
             </span>
             }
           </h2>
+          <div class="case-section__technologies">
+            @@technologies
+          </div>
         }
       </div>
       <div class="case-section__description">
@@ -23,19 +26,15 @@
             }
           </h3>
           <div class="case-section__more">
-            <a href="#" class="btn-more-c btn-next-section-js">
-              <div class="btn-more-c__line">
-                <div class="btn-more-c__line-inner@@if(context.btnMoreLineMod){ btn-more-c__line-inner_@@btnMoreLineMod}"></div>
-              </div>
-              <div class="btn-more-c__text@@if(context.btnMoreTextMod){ btn-more-c__text_@@btnMoreTextMod}">See details</div>
-              <div class="btn-more-c__arrow@@if(context.btnMoreArrowMod){ btn-more-c__arrow_@@btnMoreArrowMod}"></div>
+            <a href="#" class="btn-more-c">
+              @@textBtn             
             </a>
           </div>
         }
       </div>
       <div class="case-section__figure">
         <div class="case-section__figure-bg">
-          @@if(!context.complexShade) {
+          @@if(context.complexCircle) {
           <div class="case-section__figure-shade"></div>
           }
           @@if(context.complexShade) {
@@ -48,6 +47,18 @@
         </div>
         @@if(context.imgSrc1) {<div class="case-section__figure-img"><img src="@@imgSrc1" alt="image description" /></div>}
         @@if(context.imgSrc2) {<div class="case-section__figure-img"><img src="@@imgSrc2" alt="image description" /></div>}
+      </div>
+      <div class="case-section__rectangle"></div>
+    </div>
+
+    <div class="main-section__footer">
+      <div class="main__footer-site">
+        ©CLOVER.BY 2020
+      </div>
+      <div class="main__footer-network">
+        <a href="#"><img src="./img/behance.svg" alt="behance"></a>
+        <a href="#"><img src="./img/facebook.svg" alt="facebook"></a>
+        <a href="#"><img src="./img/instagram.svg" alt="instagram"></a>
       </div>
     </div>
   </div>

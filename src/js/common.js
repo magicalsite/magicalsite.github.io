@@ -23,8 +23,8 @@ if (DEVICE) {
  * Change font size on resize
  */
 function changeFontSize() {
-  // var step = 0.0434;
-  var step = 0.0504;
+  var step = 0.0499;
+  // var step = 0.0504;
   var fontSize = Math.round(window.innerWidth * step * 10) / 10;
   $HTML.css('font-size', fontSize + '%');
 }
@@ -270,40 +270,40 @@ $HTML.keyup(function (event) {
 /**
  * !Main menu toggle active class
  */
-function toggleActiveMenuItem() {
-  var $menu = $('.js-menu');
-  var $menuItem = $('.js-menu-item');
-  var $wordBg = $('.js-word-bg');
-  var activeClass = 'm-active';
+// function toggleActiveMenuItem() {
+//   var $menu = $('.js-menu');
+//   var $menuItem = $('.js-menu-item');
+//   var $wordBg = $('.js-word-bg');
+//   var activeClass = 'm-active';
 
-  if ($menu.length) {
-    if (!$menu.has('.' + activeClass).length) {
-      $menuItem.eq(0).addClass(activeClass);
-    }
+//   if ($menu.length) {
+//     if (!$menu.has('.' + activeClass).length) {
+//       $menuItem.eq(0).addClass(activeClass);
+//     }
 
-    $menu.on('mouseenter touchend', '.js-menu-anchor', function (e) {
-      // if (window.innerWidth < 992) return;
+//     $menu.on('mouseenter touchend', '.js-menu-anchor', function (e) {
+//       // if (window.innerWidth < 992) return;
 
-      var $curAnchor = $(this);
-      var $curItem = $curAnchor.closest($menuItem);
+//       var $curAnchor = $(this);
+//       var $curItem = $curAnchor.closest($menuItem);
 
-      if (e.handleObj.origType === 'touchend') {
-        if (!$curItem.hasClass(activeClass)) {
-          e.preventDefault();
-        }
-      }
+//       if (e.handleObj.origType === 'touchend') {
+//         if (!$curItem.hasClass(activeClass)) {
+//           e.preventDefault();
+//         }
+//       }
 
-      if ($curItem.hasClass(activeClass)) return;
+//       if ($curItem.hasClass(activeClass)) return;
 
-      var $allItems = $curAnchor.closest($menu).find($menuItem);
-      var index = $curItem.index();
-      var $curWordBg = $wordBg.eq(index);
+//       var $allItems = $curAnchor.closest($menu).find($menuItem);
+//       var index = $curItem.index();
+//       var $curWordBg = $wordBg.eq(index);
 
-      $allItems.add($wordBg).removeClass(activeClass);
-      $curItem.add($curWordBg).addClass(activeClass);
-    });
-  }
-}
+//       $allItems.add($wordBg).removeClass(activeClass);
+//       $curItem.add($curWordBg).addClass(activeClass);
+//     });
+//   }
+// }
 
 /**
  * !Form validation
