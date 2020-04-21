@@ -4375,9 +4375,9 @@ html.no-js
 }
 
 .contacts-section__caption {
-  -ms-flex: 1 0 51.6%;
-      flex: 1 0 51.6%;
-  max-width: 51.6%;
+  -ms-flex: 1 0 50.6%;
+      flex: 1 0 50.6%;
+  max-width: 50.6%;
   padding-right: 2rem;
 }
 
