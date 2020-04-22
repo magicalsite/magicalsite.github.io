@@ -59,6 +59,10 @@
   padding: 2.9rem 0 0;
   line-height: 1;
 
+  @include media("<mob") {
+    padding-top: 8.571rem;
+  }
+
   &__left {
     position: relative;
     $width: 56.6%;
@@ -87,6 +91,11 @@
   width: 23.8rem;
   flex-shrink: 0;
   z-index: 5;
+
+  @include media("<mob") {
+    width: 81.5rem;
+    height: 20rem;
+  }
 
   &::before {
     content: "";
@@ -162,6 +171,10 @@
   text-align: center;
   text-transform: uppercase;
   margin: 0 0 0 auto;
+
+  @include media('<mob') {
+    display: none;
+  }
 
   &__inner {
     height: 2.6rem;
@@ -1013,23 +1026,52 @@
   transform-origin: left top;
   pointer-events: none;
 
+  @include media("<mob") {
+    font-size: 83.766rem;
+    line-height: 102.467rem;
+  }
+
   &:nth-child(1) {
     font-size: 28.2rem;
     margin-left: calc(1 * (1em - 0.08em));
     opacity: 0.1;
     margin-top: -9.1rem;
+
+    @include media("<mob") {
+      margin-left: calc(1 * (1em - 19.8rem));
+      margin-top: -76.1rem;
+
+      font-size: 83.766rem;
+      line-height: 102.467rem;
+    }
   }
 
   &:nth-child(2) {
     margin-left: calc(2 * (1em - 0.16em));
     opacity: 0.08;
     margin-top: 2.3rem;
+
+    @include media("<mob") {
+      margin-left: calc(2 * (1em - 0.27em));
+      margin-top: -16.7rem;
+
+      font-size: 83.766rem;
+      line-height: 102.467rem;
+    }
   }
 
   &:nth-child(3) {
     margin-left: calc(3 * (1em - 0.20em));
     opacity: 0.06;
     margin-top: 14.1rem;
+
+    @include media("<mob") {
+      margin-left: calc(3 * (1em - 0.277em));
+      margin-top: 14.1rem;
+
+      font-size: 83.766rem;
+      line-height: 102.467rem;
+    }
   }
 
   // &:nth-child(4) {
@@ -1073,8 +1115,15 @@
   }
 
   &__align {
+    display: flex;
+    align-items: center;
     position: relative;
     height: 100%;
+
+    @include media("<mob") {
+      height: auto;
+      margin-top: 36.234rem;
+    }
   }
 
   &__footer {
@@ -1088,6 +1137,10 @@
     & a {
       margin-right: 10px;
     }
+
+    @include media("<mob") {
+      display: none;
+    }
   }
 }
 
@@ -1097,7 +1150,6 @@
 .menu {
   
   &__item {
-    counter-increment: item;
     position: static;
     $width: 19.2rem;
     flex: 1 0 $width;
@@ -1151,8 +1203,14 @@
       opacity: 0;
       pointer-events: none;
 
+      @include media("<mob") {
+        font-size: 6.678rem;
+        line-height: 8.961rem;
+        margin: 0 0 10.091rem 0;
+      }
+
       &::before {
-        content: "0"counter(item);
+        content: "01";
         display: block;
         position: relative;
         @include antialiased;
@@ -1189,6 +1247,10 @@
     &-content {
       display: flex;
       align-items: flex-start;
+
+      @include media("<mob") {
+        display: block;
+      }
     }
 
     &-caption {
@@ -1196,7 +1258,15 @@
       flex: 1 0 $width;
       max-width: $width;
       padding-right: 2rem;
-      padding-left: 37px;
+      padding-left: 3rem;
+
+      @include media("<mob") {
+        $width: 100%;
+        flex: 1 0 $width;
+        max-width: $width;
+        padding-right: 0rem;
+        padding-left: 0px;
+      }
     }
 
     &-title {
@@ -1209,6 +1279,12 @@
       transition: opacity 0.7s;
       opacity: 0;
       pointer-events: none;
+
+      @include media("<mob") {
+        font-size: 21.195rem;
+        line-height: 21.818rem;
+        margin-bottom: 8.182rem;
+      }
 
       .m-active & {
         opacity: 1;
@@ -1239,12 +1315,29 @@
       flex: 1 0 $width;
       max-width: $width;
       margin: 1.7rem 0 0;
-      @include font-normal;
-      font-size: 1.8rem;
-      line-height: 1.45;
       transition: opacity 0.7s;
       opacity: 0;
 
+      p {
+        &:nth-child(1) {
+          @include media("<mob") {
+            margin-bottom: 8.182rem;
+          }
+        }
+        @include font-normal;
+        font-size: 1.8rem;
+        line-height: 1.45;
+
+        @include media("<mob") {
+          font-size: 5.455rem;
+          line-height: 7.792rem;
+        }
+      }
+
+      @include media("<mob") {
+        max-width: 97.013rem;
+      }
+      
       .s-ready .m-active & {
         opacity: 1;
       }
@@ -1257,6 +1350,10 @@
       border-radius: 5px;
       align-self: center;
       margin-left: auto;
+    
+      @include media("<mob") {
+        display: none;
+      }
     }
   }
 
@@ -1760,6 +1857,10 @@
   overflow: hidden;
   padding: 0 0 1rem;
   margin: 0 0 -1rem;
+
+  @include media("<mob") {
+    display: inline;
+  }
 }
 
 .cst,
