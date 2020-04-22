@@ -93,8 +93,8 @@
   z-index: 5;
 
   @include media("<mob") {
-    width: 81.5rem;
-    height: 20rem;
+    width: 63.506rem;
+    height: 19.48rem;
   }
 
   &::before {
@@ -1536,6 +1536,10 @@
   opacity: 0;
   transition: opacity 0.6s;
 
+  @include media("<mob") {
+    padding: 9.74rem 0 0 0;
+  }
+
   &.s-visible {
     opacity: 1;
   }
@@ -1555,6 +1559,10 @@
     display: flex;
     align-items: center;
     height: 100%;
+
+    @include media("<mob") {
+      display: block;
+    }
   }
 
   &__caption {
@@ -1564,6 +1572,12 @@
     max-width: $width;
     padding: 0 2rem 0.8rem 0;
     margin: 0 0 0 -0.2rem;
+  
+    @include media("<mob") {
+      $width: 100%;
+      flex: 1 0 $width;
+      max-width: $width;
+    }
   }
 
   &__count {
@@ -1578,6 +1592,12 @@
     cursor: default;
     transition: opacity 0.6s 1.5s;
     opacity: 0;
+
+    @include media("<mob") {
+      font-size: 4.675rem;
+      line-height: 7.013rem;
+      margin: 37.013rem 0 0 0.779rem;
+    }
 
     &_dark-gray {
       color: #333;
@@ -1609,6 +1629,11 @@
     line-height: 7.5rem;
     color: white;
 
+    @include media("<mob") {
+      font-size: 18.701rem;
+      line-height: 18.701rem;
+    }
+
     &_dark-gray {
       color: #333;
     }
@@ -1625,6 +1650,12 @@
   line-height: 1.6rem;
   color: #fff;
   opacity: 0.38;
+    
+    @include media("<mob") {
+      font-size: 4.675rem;
+      line-height: 5.844rem;
+      margin-top: 6.5rem;
+    }
   }
 
   &__description {
@@ -1633,6 +1664,18 @@
     flex: 1 0 $width;
     max-width: $width;
     padding: 0 2rem 0 0;
+
+    @include media("<mob") {
+      padding: 0;
+      display: flex;
+      $width: 100%;
+      flex: 1 0 $width;
+      max-width: $width;
+      justify-content: flex-start;
+      z-index: 10;
+      position: absolute;
+      bottom: 20%;
+    }
 
     &_gray {
       color: #919191;
@@ -1645,6 +1688,12 @@
     font-size: 3rem;
     line-height: 3.75rem;
     color: white;
+
+    @include media("<mob") {
+      font-size: 7.013rem;
+      line-height: 9.351rem;
+      margin-right: 7.403rem;
+    }
 
     &_gray {
       color: #919191;
@@ -1667,6 +1716,14 @@
     justify-content: center;
     z-index: 1;
 
+    @include media("<mob") {
+      $width: 100%;
+      flex: 1 0 $width;
+      max-width: $width;
+
+      position: static;
+    }
+
     &-bg {
       position: absolute;
       left: 50%;
@@ -1677,8 +1734,10 @@
       z-index: -1;
 
       // <992px
-      @include media("height<700px") {
-        width: 42rem;
+      @include media("<mob") {
+        width: 102.857rem;
+        height: 102.857rem;
+        top: 55%;
       }
 
       &::before {
@@ -1818,13 +1877,20 @@
         delay: 1.3s;
         timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
       }
-
+      
       $translate: -50%,
       -50%;
       $scale: 0.85,
       0.85;
       transform: translate($translate) scale($scale);
       transform: translate3d($translate, 0) scale3d($scale, 1);
+
+      @include media("<mob") {
+        left: 50%;
+        top: 52%;
+        height: 63%;
+        width: 100%;
+      }
 
       .s-ready & {
         opacity: 1;
@@ -1848,6 +1914,10 @@
     border-radius: 0.41rem;
     position: relative;
     left: 14px;
+
+    @include media("<mob") {
+      display: none;
+    }
   }
 }
 

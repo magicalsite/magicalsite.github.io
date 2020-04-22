@@ -14,6 +14,14 @@
   font-size: 1.16rem;
   line-height: 3.75rem;
   color: #FFFFFF;
+
+  @include media("<mob") {
+    font-size: 5.455rem;
+    line-height: 17.532rem;
+    border-radius: 1.948rem;
+    padding: 6.039rem 21.429rem;
+    background: rgb(117, 103, 103);
+  }
 }
 
 .btn-more-c__line {
