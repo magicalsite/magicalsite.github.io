@@ -2340,7 +2340,7 @@ form .success + .select-arrow + .error-feedback + .success-feedback {
     font-size: 5.455rem;
     line-height: 17.532rem;
     border-radius: 1.948rem;
-    padding: 6.039rem 21.429rem;
+    padding: 5.039rem 17.429rem;
     background: rgba(151, 146, 146, 0.97);
   }
 }
@@ -4252,11 +4252,14 @@ html.no-js
     -ms-flex: 1 0 100%;
         flex: 1 0 100%;
     max-width: 100%;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     z-index: 10;
     position: absolute;
     bottom: 43rem;
+    width: 91%;
   }
 }
 
@@ -4288,6 +4291,12 @@ html.no-js
 .case-section__more {
   width: 12.75rem;
   max-width: 100%;
+}
+
+@media (max-width: 639px) {
+  .case-section__more {
+    width: 52.208rem;
+  }
 }
 
 .case-section__figure {

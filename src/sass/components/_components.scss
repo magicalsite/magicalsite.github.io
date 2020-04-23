@@ -1688,10 +1688,12 @@
       $width: 100%;
       flex: 1 0 $width;
       max-width: $width;
-      justify-content: flex-start;
+      justify-content: center;
+      align-items: center;
       z-index: 10;
       position: absolute;
       bottom: 43rem;
+      width: 91%;
       // position: absolute;
       // bottom: 20%;
       // margin-top: 88%;
@@ -1723,6 +1725,10 @@
   &__more {
     width: 12.75rem;
     max-width: 100%;
+
+    @include media("<mob") {
+      width: 52.208rem;
+    }
   }
 
   &__figure {
