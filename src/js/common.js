@@ -2,6 +2,16 @@ var $WINDOW = $(window),
     $HTML = $('html'),
     $BODY = $('body');
 
+  /**
+  * Change font size on resize
+  */
+  function changeFontSize() {
+    var step = 0.0499;
+    var fontSize = Math.round(window.innerWidth * step * 10) / 10;
+    $HTML.css('font-size', fontSize + '%');
+  }
+  changeFontSize();
+
 /**
  * !Detects overlay scrollbars (when scrollbars on overflowed blocks are visible).
  * This is found most commonly on mobile and OS X.
@@ -18,17 +28,6 @@ var DEVICE = !!md.mobile() || !!md.tablet();
 if (DEVICE) {
   $HTML.addClass('mobile-device');
 }
-
-/**
- * Change font size on resize
- */
-function changeFontSize() {
-  var step = 0.0499;
-  // var step = 0.0504;
-  var fontSize = Math.round(window.innerWidth * step * 10) / 10;
-  $HTML.css('font-size', fontSize + '%');
-}
-changeFontSize();
 
 /**
  * !Add touchscreen classes
@@ -95,9 +94,6 @@ function fullPageInitial() {
         $HTML.addClass('logo-theme-light');
       }
 
-      if(destination.isLast && $section.prev().attr('data-logo-theme') === "light") {
-        $HTML.addClass('logo-theme-light');
-      }
     }
 
     $fpSections.fullpage({
@@ -137,9 +133,6 @@ function fullPageInitial() {
           $BODY.css('background-color', '');
         }
 
-        if(destination.isLast) {
-          $BODY.css('background-color', $(destination.item).prev().attr('data-bg-color'));
-        }
       },
       afterLoad: function(origin, destination, direction){
         sectionReady(destination);
@@ -374,6 +367,7 @@ $WINDOW.on('resize', function () {
 });
 
 $WINDOW.on('load', function () {
+  changeFontSize();
   $HTML.addClass('page-loaded');
   $('.js-p-preloader').addClass('p-preloader_hide');
   $('.js-article').addClass('article-ready');
@@ -381,6 +375,7 @@ $WINDOW.on('load', function () {
 });
 
 $(document).ready(function () {
+  changeFontSize();
   // Base
   addTouchClasses();
   fullPageInitial();
