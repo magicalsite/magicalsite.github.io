@@ -1763,7 +1763,7 @@
       @include media("<mob") {
         width: 102.857rem;
         height: 102.857rem;
-        top: 55%;
+        top: 57%;
       }
 
       &::before {
@@ -1929,6 +1929,92 @@
       img {
         max-height: 100%;
         max-width: 100%;
+      }
+
+      &_social3 {
+        left: 57%;
+        top: 52%;
+        @include media("<mob") {
+          background: url(../img/img-case-03_mobile.png) no-repeat center 27.312rem;
+          left: 50%;
+        }
+      }
+      &_social3 img {
+        width: 55.301rem;
+        height: 55.954rem;
+        @include media("<mob") {
+          display: none;
+        }
+      }
+      &_social4 {
+        @include media("<mob") {
+          background: url(../../img/img-case-04_mobile.png) no-repeat center 18.312rem;
+        }
+      }
+      &_social4 img {
+        @include media("<mob") {
+          display: none;
+        }
+      }
+
+      &_social5 {
+        left: 53%;
+        top: 51%;
+        @include media("<mob") {
+          left: 50%;
+          top: 55%;
+        }
+      }
+      &_social5 img {
+        width: 61.464rem;
+        height: 57.158rem;
+        @include media("<mob") {
+          width: 129.464rem;
+          height: 125.158rem;
+        }
+      }
+      &_social6 {
+        left: 58%;
+        top: 54%;
+        @include media("<mob") {
+          left: 50%;
+        }
+      }
+      &_social7 {
+        @include media("<mob") {
+          top: 56%;
+          height: 55%;
+        }
+      }
+      &_social8 {
+        left: 54%;
+        top: 54%;
+        @include media("<mob") {
+          left: 50%;
+          top: 57%;
+        }
+      }
+      &_social11 {
+        @include media("<mob") {
+          top: 57%;
+          height: 52%;
+        }
+      }
+      &_social12 {
+        left: 50%;
+        top: 52%;
+        @include media("<mob") {
+          height: 40%;
+          top: 55%;
+        }
+      }
+      &_social12 img {
+        width: 55.834rem;
+        height: 46.838rem;
+        @include media("<mob") {
+          width: 106.363rem;
+          height: 88.052rem;
+        }
       }
     }
   }
