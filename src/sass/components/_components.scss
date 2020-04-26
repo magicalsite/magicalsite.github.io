@@ -1934,10 +1934,12 @@
 
       &_social3 {
         left: 57%;
-        top: 52%;
+        top: 50%;
+        align-items: flex-end;
         @include media("<mob") {
           background: url(../img/img-case-03_mobile.png) no-repeat center 27.312rem;
           left: 50%;
+          top: 52%;
         }
       }
       &_social3 img {
@@ -1960,10 +1962,11 @@
 
       &_social5 {
         left: 53%;
-        top: 51%;
+        top: 50%;
+        align-items: flex-end;
         @include media("<mob") {
           left: 50%;
-          top: 55%;
+          top: 52%;
         }
       }
       &_social5 img {
@@ -1976,11 +1979,13 @@
       }
       &_social6 {
         left: 58%;
-        top: 54%;
+        top: 50%;
+        align-items: flex-end;
         @include media("<mob") {
           left: 50%;
         }
       }
+
       &_social7 {
         @include media("<mob") {
           top: 56%;
@@ -1989,12 +1994,23 @@
       }
       &_social8 {
         left: 54%;
-        top: 54%;
+        top: 50%;
+        align-items: flex-end;
+        justify-content: flex-end;
         @include media("<mob") {
           left: 50%;
-          top: 57%;
+          top: 52%;
         }
       }
+      &_social8 img {
+        width: 57.224rem;
+        height: 54.204rem;
+        @include media("<mob") {
+          width: 137.224rem;
+          height: 134.204rem;
+        }
+      }
+
       &_social11 {
         @include media("<mob") {
           top: 57%;
@@ -2012,6 +2028,7 @@
       &_social12 img {
         width: 55.834rem;
         height: 46.838rem;
+        box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.188374);
         @include media("<mob") {
           width: 106.363rem;
           height: 88.052rem;
