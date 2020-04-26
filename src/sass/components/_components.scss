@@ -1664,7 +1664,8 @@
   @include font-demi;
   text-transform: uppercase;
   font-size: 1.3rem;
-  line-height: 1.6rem;
+  line-height: 2.3rem;
+  // line-height: 1.6rem;
   color: #fff;
   opacity: 0.38;
     
@@ -2037,7 +2038,7 @@
 .mt {
   display: block;
   overflow: hidden;
-  padding: 0 0 1rem;
+  padding: 0 0 0.7rem;
   margin: 0 0 -1rem;
 
   @include media("<mob") {
