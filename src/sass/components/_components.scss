@@ -1684,20 +1684,24 @@
     padding: 0 2rem 0 0;
 
     @include media("<mob") {
-      padding: 0;
-      display: flex;
-      $width: 100%;
-      flex: 1 0 $width;
-      max-width: $width;
-      justify-content: center;
-      align-items: center;
-      z-index: 10;
-      position: absolute;
-      bottom: 43rem;
-      width: 91%;
-      // position: absolute;
-      // bottom: 20%;
-      // margin-top: 88%;
+      margin-left: -19px;
+    padding: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    max-width: 100%;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    bottom: 36rem;
+    width: 100%;
+    background: url(../img/shadow.svg) no-repeat center bottom/cover;
+    height: 133px;
+    line-height: 133px;
     }
 
     &_gray {
@@ -1726,9 +1730,11 @@
   &__more {
     width: 12.75rem;
     max-width: 100%;
+    position: relative;
 
     @include media("<mob") {
       width: 52.208rem;
+      height: 17.143rem;
     }
   }
 
