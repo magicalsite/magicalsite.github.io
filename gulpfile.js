@@ -110,7 +110,7 @@ gulp.task('sassCompilation', ['normalize'], function () {
       .pipe(replace('../../', '../'))
       .pipe(replace('@charset "UTF-8";', ''))
       .pipe(autoprefixer([
-        'last 5 versions', '> 1%', 'ie >= 9', 'and_chr >= 2.3' //, 'ie 8', 'ie 7'
+        'last 6 versions', '> 1%', 'ie >= 9', 'and_chr >= 2.3' //, 'ie 8', 'ie 7'
       ], {
         cascade: true
       }))
@@ -255,7 +255,7 @@ gulp.task('sassCompilationForDist', function () {
       .pipe(replace('../../', '../'))
       .pipe(replace('@charset "UTF-8";', ''))
       .pipe(autoprefixer([
-        'last 5 versions', '> 1%', 'ie >= 9', 'and_chr >= 2.3'
+        'last 6 versions', '> 1%', 'ie >= 9', 'and_chr >= 2.3'
       ], {
         cascade: true
       }))

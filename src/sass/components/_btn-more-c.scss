@@ -26,6 +26,11 @@
     font-size: 5.455rem;
     line-height: 17.532rem;
     border-radius: 1.948rem;
+    @supports not (backdrop-filter: blur(20px)) {
+      & { 
+        background: rgba(185, 185, 185, 0.5);
+       }
+     }
   }
 }
 

@@ -26,7 +26,9 @@ var TOUCHEVENTS = ("ontouchstart" in document.documentElement);
 var md = new MobileDetect(window.navigator.userAgent);
 var DEVICE = !!md.mobile() || !!md.tablet();
 if (DEVICE) {
+  
   $HTML.addClass('mobile-device');
+  
 }
 
 /**
