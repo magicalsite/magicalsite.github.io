@@ -1949,6 +1949,7 @@
       }
       &_social1 {
         width: 90%;
+        align-items: flex-end;
       }
       &_social3 {
         left: 57%;
@@ -2003,6 +2004,15 @@
           left: 50%;
         }
       }
+      &_social6 img {
+        width: 53.796rem;
+        height: 53.551rem;
+        @include media("<mob") {
+          width: 129.701rem;
+          height: 123.506rem;
+        }
+      }
+
 
       &_social7 {
         @include media("<mob") {
@@ -2011,6 +2021,8 @@
         }
       }
       &_social7 img {
+        width: 41.633rem;
+        height: 57.306rem;
         @include media("<mob") {
           width: 97.701rem;
           height: 127.506rem;
@@ -2041,6 +2053,8 @@
       }
 
       &_social11 img {
+        width: 41.633rem;
+        height: 46.612rem;
         @include media("<mob") {
           width: 95.675rem;
           height: 110.48rem;
@@ -2363,6 +2377,7 @@
 
 /* article share */
 .article-share {
+  position: absolute;
   position: sticky;
   top: 2rem;
   height: 0;
@@ -2382,16 +2397,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    $size: 5rem;
+    $size: 3.184rem;
     height: $size;
     width: $size;
     border-radius: $size;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.469rem;
     text-align: left;
     text-decoration: none;
-    transition: filter $animation-speed;
-    filter: grayscale(1);
-    background-color: white;
+    // transition: filter $animation-speed;
+    // filter: grayscale(1);
+    background-color: #FFD600;
     box-shadow: 0 7px 38px rgba(155, 155, 155, 0.5);
 
     &:hover {
@@ -2403,7 +2418,7 @@
     }
 
     svg {
-      $size: 2.4rem;
+      $size: 1.8rem;
       display: block;
       height: $size;
       width: $size;
@@ -2412,6 +2427,146 @@
 }
 
 /* article share end */
+
+/* ==================================== */
+/* ============ ABOUT ============ */
+/* ==================================== */
+
+.about {
+  background-color: #FFD600;
+
+  &__rect {
+    left: 0;
+    bottom: 8rem;
+  }
+}
+.about__plus .wbg__item:nth-child(2) {
+  opacity: 0.16;
+} 
+
+.about__title {
+  @include font-bold;
+  font-size: 5.959rem;
+  line-height: 6.122rem;
+  margin-bottom: 10.607rem;
+}
+.about__block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__menu {
+  position: absolute;
+  position: sticky;
+  top: 2rem;
+  background-color: #fff;
+  width: 14.367rem;
+  height: 11rem;
+  margin-left: 5rem;    
+
+  & ul li:hover {
+    background-color: black;
+    color: #fff;
+  }
+  & ul li {
+    @include font-important-bold;
+    font-size: 0.98rem;
+    line-height: 3.673rem;
+    padding-left: 1.714rem;
+    cursor: pointer;
+  }
+}
+
+.about__items {
+  position: relative;
+  left: 0.532rem;
+}
+.about__items_point {
+  background-color: #fff;
+  width: 48.98rem;
+  padding: 2.612rem 2.612rem 4.49rem 2.612rem;
+  margin-bottom: 4.735rem;
+
+  & h3 {
+    font-size: 2.939rem;
+    line-height: 6.204rem;
+    margin-bottom: 8px;
+  }
+
+  & .about__items_paragraph {
+    font-size: 1.469rem;
+    line-height: 2.122rem;
+  }
+}
+
+.about__items_block {
+  & h4 {
+    font-size: 1.469rem;
+    line-height: 2.856rem;
+    margin-bottom: 10px;
+  }
+  & p {
+    margin-bottom: 2.856rem;
+  }
+}
+
+.art-director {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+
+  & img {
+    margin-bottom: 1rem;
+  }
+  &__name {
+    font-size: 1.469rem;
+    line-height: 2.121rem;
+    margin-bottom: 1.5rem;
+  }
+  &__name-bold {
+    text-transform: uppercase;
+    @include font-bold;
+  }
+  & img {
+    width: 7.588rem;
+    height: 7.588rem;
+  }
+  &__button {
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.142rem;
+    line-height: 3.672rem;
+    padding: 0 1.713rem;
+    @include font-important-bold;
+    background: rgba(33, 32, 32, 0.27);
+    backdrop-filter: blur(20px);
+    border: 0;
+    border-radius: 0.408rem;
+    text-transform: uppercase;
+    margin-bottom: 1.795rem;
+    position: relative;
+    z-index: 12;
+  }
+  &__letter {
+    @include font-bold;
+    font-size: 26.208rem;
+    line-height: 26.926rem;
+    color: rgba(0, 0, 0, 0.5);
+    opacity: 0.3;
+    &:last-child {
+      opacity: 0.1;
+      line-height: 11rem;
+    }
+  }
+}
+
+
+
+
+
+
 
 /* ==================================== */
 /* ============ HURKOU ============ */
@@ -2427,6 +2582,10 @@
 
 .logotype {
   background: url(../../img/logo-alt.svg) no-repeat;
+  height: 60px;
+}
+.logoBlue {
+  background: url(../../img/logo.svg) no-repeat;
   height: 60px;
 }
 
