@@ -2464,12 +2464,17 @@
   height: 11rem;
   margin-left: 5rem;    
 
-  & ul li:hover {
+  & ul a:hover {
     background-color: black;
     color: #fff;
   }
-  & ul li {
+  & ul a {
     @include font-important-bold;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    width: 100%;
     font-size: 0.98rem;
     line-height: 3.673rem;
     padding-left: 1.714rem;
@@ -2562,7 +2567,58 @@
   }
 }
 
+// About Form
 
+.about__form {
+  background: #FFFFFF;
+  box-sizing: border-box;
+
+  & input {
+    padding: 1.958rem 0 1.958rem 1.958rem;
+    border: 1px solid #D2D2D2;
+    width: 100%;
+
+
+    &:first-child {
+      @include font-normal;
+      border-top-left-radius: 0.816rem;
+      border-top-right-radius: 0.816rem;
+    }
+    &::placeholder {
+      @include font-normal;
+      font-size: 1.469rem;
+      line-height: 1.625rem;
+      color: #ABABAB;
+    } 
+  }
+  & textarea {
+    @include font-normal;
+    padding: 1.958rem 0 0 1.958rem;
+    width: 100%;
+    resize: none;
+    border: 1px solid #D2D2D2;
+    border-bottom-left-radius: 0.816rem;
+    border-bottom-right-radius: 0.816rem;
+
+    &::placeholder {
+      @include font-normal;
+      font-size: 1.469rem;
+      line-height: 1.625rem;
+      color: #ABABAB;
+    }
+  }
+  & button {
+    text-transform: none;
+    font-size: 1.175rem;
+    line-height: 3.59rem;
+    color: #fff;
+    background: #000000;
+    border-radius: 0.408rem;
+    width: 12.484rem;
+    height: 3.59rem;
+    margin-top: 2.203rem;
+  }
+}
 
 
 

@@ -537,7 +537,7 @@ body {
 
 .layout-text {
   box-sizing: content-box;
-  max-width: 92rem;
+  max-width: 100rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -5139,14 +5139,21 @@ html.no-js
   margin-left: 5rem;
 }
 
-.about__menu ul li:hover {
+.about__menu ul a:hover {
   background-color: black;
   color: #fff;
 }
 
-.about__menu ul li {
+.about__menu ul a {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: 700;
+  text-decoration: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  color: #000;
+  width: 100%;
   font-size: 0.98rem;
   line-height: 3.673rem;
   padding-left: 1.714rem;
@@ -5249,6 +5256,73 @@ html.no-js
 .art-director__letter:last-child {
   opacity: 0.1;
   line-height: 11rem;
+}
+
+.about__form {
+  background: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.about__form input {
+  padding: 1.958rem 0 1.958rem 1.958rem;
+  border: 1px solid #D2D2D2;
+  width: 100%;
+}
+
+.about__form input:first-child {
+  font-family: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif;
+  border-top-left-radius: 0.816rem;
+  border-top-right-radius: 0.816rem;
+}
+
+.about__form input:-ms-input-placeholder {
+  font-family: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif;
+  font-size: 1.469rem;
+  line-height: 1.625rem;
+  color: #ABABAB;
+}
+
+.about__form input::placeholder {
+  font-family: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif;
+  font-size: 1.469rem;
+  line-height: 1.625rem;
+  color: #ABABAB;
+}
+
+.about__form textarea {
+  font-family: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif;
+  padding: 1.958rem 0 0 1.958rem;
+  width: 100%;
+  resize: none;
+  border: 1px solid #D2D2D2;
+  border-bottom-left-radius: 0.816rem;
+  border-bottom-right-radius: 0.816rem;
+}
+
+.about__form textarea:-ms-input-placeholder {
+  font-family: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif;
+  font-size: 1.469rem;
+  line-height: 1.625rem;
+  color: #ABABAB;
+}
+
+.about__form textarea::placeholder {
+  font-family: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif;
+  font-size: 1.469rem;
+  line-height: 1.625rem;
+  color: #ABABAB;
+}
+
+.about__form button {
+  text-transform: none;
+  font-size: 1.175rem;
+  line-height: 3.59rem;
+  color: #fff;
+  background: #000000;
+  border-radius: 0.408rem;
+  width: 12.484rem;
+  height: 3.59rem;
+  margin-top: 2.203rem;
 }
 
 /* ==================================== */

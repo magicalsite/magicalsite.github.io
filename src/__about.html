@@ -38,14 +38,14 @@
 
                     <div class="about__menu">
                         <ul>
-                            <li class="">ABOUT</li>
-                            <li>SERVISES</li>
-                            <li>CONTACT</li>
+                            <a href="#about">ABOUT</a>
+                            <a href="#services">SERVICES</a>
+                            <a href="#contact">CONTACT</a>
                         </ul>
                     </div>
 
                     <div class="about__items">
-                        <div class="about__items_point">
+                        <div id="about" class="about__items_point">
                             <h3>UX design product design</h3>
                             <img src="./img/about__image.png" alt="">
                             <p class="about__items_paragraph">
@@ -62,7 +62,7 @@
                             </p>
 
                         </div>
-                        <div class="about__items_point">
+                        <div id="services" class="about__items_point">
                             <h3>Services</h3>
                             <div class="about__items_block">
                                 <h4>UX/UI DESIGN</h4>
@@ -92,8 +92,14 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="about__items_point">
+                        <div id="contact" class="about__items_point">
                             <h3>Contact</h3>
+                            <form action="" class="about__form">
+                                <input type="text" name="" id="" placeholder="Name">
+                                <input type="email" name="" id="" placeholder="E - mail">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Type your text here..."></textarea>
+                                <button type="submit" class="art-director__button">Send</button>
+                            </form>
                         </div>
                     </div>
 

@@ -363,6 +363,17 @@ function scrollBannerUX() {
   });
 }
 
+let arr = [];
+$('a[href^="#"]').click(function(){
+  var target = $(this).attr('href');
+  let a = $(this);
+  arr.push(a);
+  
+  $(this).css({ "background-color": "#000", "color": "#fff"});
+  arr[arr.length-2].css({ "background-color": "#fff", "color": "#000"});
+  $('html, body').animate({scrollTop: $(target).offset().top}, 600);
+  return false;
+  });
 
 $WINDOW.on('resize', function () {
   changeFontSize();
