@@ -1917,6 +1917,10 @@
       transform: translate(-50%, -50%);
       z-index: -1;
 
+      &_10 {
+        z-index: 3;
+      }
+
       // <992px
       @include media("<mob") {
         width: 102.857rem;
@@ -2191,6 +2195,32 @@
 
       &_social10 {
         top: 52%;
+        z-index: 4;
+      }
+      &_social10 img {
+        width: 47.753rem;
+        height: 62.031rem;
+        @include media("<mob") {
+          width: 127.753rem;
+          height: 142.031rem;
+        }
+      }
+      &_social10_dop {
+        z-index: 2;
+        top: 80%;
+        left: 73%;
+        @include media("<mob") {
+          top: 50%;
+          left: 66%;
+        }
+      }
+      &_social10_dop img {
+        width: 27.252rem;
+        height: 16.808rem;
+        @include media("<mob") {
+          width: 57.252rem;
+          height: 40rem;
+        }
       }
 
       &_social11 img {

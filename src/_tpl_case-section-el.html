@@ -36,7 +36,7 @@
         }
       </div>
       <div class="case-section__figure">
-        <div class="case-section__figure-bg">
+        <div class="case-section__figure-bg@@if(context.social10){ case-section__figure-bg_10 }">
           @@if(context.complexCircle) {
           <div class="case-section__figure-shade"></div>
           }
@@ -54,7 +54,7 @@
         </div>
       }
         @@if(context.imgSrc2) {
-          <div class="case-section__figure-img@@if(context.social1){ case-section__figure-img_social1 }">
+          <div class="case-section__figure-img@@if(context.social1){ case-section__figure-img_social1 }@@if(context.social10){ case-section__figure-img_social10_dop }">
             <img src="@@imgSrc2" alt="image description" />
         </div>
       }
