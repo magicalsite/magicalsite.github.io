@@ -4856,24 +4856,17 @@ html.no-js
 
 .case-section__figure-img_social10_dop {
   z-index: 2;
-  top: 80%;
-  left: 73%;
-}
-
-@media (max-width: 639px) {
-  .case-section__figure-img_social10_dop {
-    top: 50%;
-    left: 66%;
-  }
-}
-
-.case-section__figure-img_social10_dop img {
+  position: absolute;
+  bottom: 7%;
+  right: 7%;
   width: 27.252rem;
   height: 16.808rem;
 }
 
 @media (max-width: 639px) {
-  .case-section__figure-img_social10_dop img {
+  .case-section__figure-img_social10_dop {
+    bottom: 4%;
+    right: 4%;
     width: 57.252rem;
     height: 40rem;
   }

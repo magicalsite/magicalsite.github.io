@@ -2207,17 +2207,15 @@
       }
       &_social10_dop {
         z-index: 2;
-        top: 80%;
-        left: 73%;
-        @include media("<mob") {
-          top: 50%;
-          left: 66%;
-        }
-      }
-      &_social10_dop img {
+        position: absolute;
+        bottom: 7%;
+        right: 7%;
         width: 27.252rem;
         height: 16.808rem;
+
         @include media("<mob") {
+          bottom: 4%;
+          right: 4%;
           width: 57.252rem;
           height: 40rem;
         }
