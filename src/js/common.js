@@ -96,7 +96,73 @@ function fullPageInitial() {
         $HTML.addClass('logo-theme-light');
       }
 
+      if ($section.attr('data-wbg') === "main") {
+        $('.wbg__item').removeClass('first');
+      }
+      if ($section.attr('data-wbg') === "first") {
+        $('.wbg__item').addClass('first');
+        $('.wbg__item').removeClass('second');
+      }
+      if ($section.attr('data-wbg') === "second") {
+        $('.wbg__item').addClass('second');
+        $('.wbg__item').removeClass('first');
+        $('.wbg__item').removeClass('third');
+      }
+      if ($section.attr('data-wbg') === "third") {
+        $('.wbg__item').addClass('third');
+        $('.wbg__item').removeClass('second');
+        $('.wbg__item').removeClass('fourth');
+      }
+      if ($section.attr('data-wbg') === "fourth") {
+        $('.wbg__item').addClass('fourth');
+        $('.wbg__item').removeClass('third');
+        $('.wbg__item').removeClass('fifth');
+      }
+      if ($section.attr('data-wbg') === "fifth") {
+        $('.wbg__item').addClass('fifth');
+        $('.wbg__item').removeClass('fourth');
+        $('.wbg__item').removeClass('sixth');
+      }
+      if ($section.attr('data-wbg') === "sixth") {
+        $('.wbg__item').addClass('sixth');
+        $('.wbg__item').removeClass('fifth');
+        $('.wbg__item').removeClass('seventh');
+      }
+      if ($section.attr('data-wbg') === "seventh") {
+        $('.wbg__item').addClass('seventh');
+        $('.wbg__item').removeClass('sixth');
+        $('.wbg__item').removeClass('eighth');
+      }
+      if ($section.attr('data-wbg') === "eighth") {
+        $('.wbg__item').addClass('eighth');
+        $('.wbg__item').removeClass('seventh');
+        $('.wbg__item').removeClass('ninth');
+      }
+      if ($section.attr('data-wbg') === "ninth") {
+        $('.wbg__item').addClass('ninth');
+        $('.wbg__item').removeClass('eighth');
+        $('.wbg__item').removeClass('tenth');
+      }
+      if ($section.attr('data-wbg') === "tenth") {
+        $('.wbg__item').addClass('tenth');
+        $('.wbg__item').removeClass('ninth');
+        $('.wbg__item').removeClass('eleventh');
+      }
+      if ($section.attr('data-wbg') === "eleventh") {
+        $('.wbg__item').addClass('eleventh');
+        $('.wbg__item').removeClass('tenth');
+        $('.wbg__item').removeClass('twelfth');
+      }
+      if ($section.attr('data-wbg') === "twelfth") {
+        $('.wbg__item').addClass('twelfth');
+        $('.wbg__item').removeClass('eleventh');
+      }
+      if ($section.attr('data-wbg') === "footer") {
+        $('.wbg__item').removeClass('twelfth');
+      }
+
     }
+
 
     $fpSections.fullpage({
       css3: true,
