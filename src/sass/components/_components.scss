@@ -1918,7 +1918,7 @@
       z-index: -1;
 
       &_10 {
-        z-index: 3;
+        // z-index: 3;
       }
 
       // <992px
@@ -1947,6 +1947,7 @@
       border-radius: 50%;
       $prop: transform, opacity;
       will-change: $prop;
+      z-index: 3;
 
       transition: {
         property: $prop;
@@ -2067,8 +2068,7 @@
         timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
       }
       
-      $translate: -50%,
-      -50%;
+      $translate: -50%, -50%;
       $scale: 0.85,
       0.85;
       transform: translate($translate) scale($scale);
@@ -2097,13 +2097,13 @@
         align-items: flex-end;
       }
       &_social3 {
-        left: 57%;
-        top: 50%;
-        align-items: flex-end;
+        // left: 57%;
+        // top: 50%;
+        // align-items: flex-end;
         @include media("<mob") {
           background: url(../img/img-case-03_mobile.png) no-repeat center bottom;
-          left: 50%;
-          top: 50%;
+          // left: 50%;
+          // top: 50%;
         }
       }
       &_social3 img {
@@ -2125,9 +2125,9 @@
       }
 
       &_social5 {
-        left: 53%;
-        top: 50%;
-        align-items: flex-end;
+        // left: 53%;
+        // top: 50%;
+        // align-items: flex-end;
         @include media("<mob") {
           left: 50%;
           top: 52%;
@@ -2142,9 +2142,9 @@
         }
       }
       &_social6 {
-        left: 58%;
-        top: 50%;
-        align-items: flex-end;
+        // left: 58%;
+        // top: 50%;
+        // align-items: flex-end;
         @include media("<mob") {
           left: 50%;
         }
@@ -2175,10 +2175,10 @@
       }
 
       &_social8 {
-        left: 54%;
-        top: 50%;
-        align-items: flex-end;
-        justify-content: flex-end;
+        // left: 54%;
+        // top: 50%;
+        // align-items: flex-end;
+        // justify-content: flex-end;
         @include media("<mob") {
           left: 50%;
           top: 52%;
@@ -2208,14 +2208,14 @@
       &_social10_dop {
         z-index: 2;
         position: absolute;
-        bottom: 7%;
-        right: 7%;
+        bottom: 0;
+        right: 0;
         width: 27.252rem;
         height: 16.808rem;
 
         @include media("<mob") {
-          bottom: 4%;
-          right: 4%;
+          bottom: -6%;
+          right: -6%;
           width: 57.252rem;
           height: 40rem;
         }
@@ -2230,8 +2230,8 @@
         }
       }
       &_social12 {
-        left: 50%;
-        top: 52%;
+        // left: 50%;
+        // top: 52%;
         @include media("<mob") {
           height: 100%;
           top: 42%;
