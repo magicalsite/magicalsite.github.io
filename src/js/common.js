@@ -28,6 +28,7 @@ var DEVICE = !!md.mobile() || !!md.tablet();
 if (DEVICE) {
   
   $HTML.addClass('mobile-device');
+  $('section').addClass('s-ready s-visible');
   
 }
 
