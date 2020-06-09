@@ -4692,12 +4692,6 @@ html.no-js
   max-width: 100%;
 }
 
-.case-section__figure-img_social1 {
-  width: 90%;
-  -ms-flex-align: end;
-      align-items: flex-end;
-}
-
 @media (max-width: 639px) {
   .case-section__figure-img_social3 {
     background: url(../img/img-case-03_mobile.png) no-repeat center bottom;
