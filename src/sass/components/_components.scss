@@ -2119,6 +2119,7 @@
       }
       &_social4 {
         @include media("<mob") {
+          top: 47%;
           background: url(../../img/img-case-04_mobile.png) no-repeat center bottom;
         }
       }
@@ -2131,7 +2132,7 @@
       &_social5 {
         // left: 53%;
         // top: 50%;
-        // align-items: flex-end;
+        
         @include media("<mob") {
           left: 50%;
           top: 52%;

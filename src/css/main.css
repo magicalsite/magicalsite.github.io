@@ -4723,6 +4723,7 @@ html.no-js
 
 @media (max-width: 639px) {
   .case-section__figure-img_social4 {
+    top: 47%;
     background: url(../img/img-case-04_mobile.png) no-repeat center bottom;
   }
 }
