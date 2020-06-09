@@ -4290,6 +4290,12 @@ html.no-js
   }
 }
 
+@media (max-width: 479px) {
+  .case-section {
+    padding: 38rem 0 0 0;
+  }
+}
+
 .case-section.s-visible {
   opacity: 1;
 }
@@ -4690,6 +4696,12 @@ html.no-js
 .case-section__figure-img img {
   max-height: 100%;
   max-width: 100%;
+}
+
+@media (max-width: 639px) {
+  .case-section__figure-img_social1 {
+    width: 90%;
+  }
 }
 
 @media (max-width: 639px) {

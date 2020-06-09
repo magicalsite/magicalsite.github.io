@@ -1702,6 +1702,9 @@
     padding: 45rem 0 0 0;
     overflow: hidden;
   }
+  @include media("<mob-s") {
+    padding: 38rem 0 0 0;
+  }
 
   &.s-visible {
     opacity: 1;
@@ -1834,7 +1837,7 @@
     padding: 0 2rem 0 0;
 
     @include media("<mob") {
-      margin-left: -19px;
+    margin-left: -19px;
     padding: 0;
     display: -ms-flexbox;
     display: flex;
@@ -2093,8 +2096,9 @@
         max-width: 100%;
       }
       &_social1 {
-        // width: 90%;
-        // align-items: flex-end;
+        @include media("<mob") {
+          width: 90%;
+        }
       }
       &_social3 {
         // left: 57%;
