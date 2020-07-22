@@ -2,6 +2,12 @@
 @import "../utils/mixins";
 @import "../../libs/include-media/dist/include-media";
 
+::-webkit-scrollbar { 
+  width: 3px;
+  height: 203px;
+  background: red;
+}
+
 .icon-peace {
   display: inline-block;
   height: 6rem;

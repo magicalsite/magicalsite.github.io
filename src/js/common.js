@@ -1,16 +1,16 @@
 var $WINDOW = $(window),
-    $HTML = $('html'),
-    $BODY = $('body');
+  $HTML = $('html'),
+  $BODY = $('body');
 
-  /**
-  * Change font size on resize
-  */
-  function changeFontSize() {
-    var step = 0.0499;
-    var fontSize = Math.round(window.innerWidth * step * 10) / 10;
-    $HTML.css('font-size', fontSize + '%');
-  }
-  changeFontSize();
+/**
+ * Change font size on resize
+ */
+// function changeFontSize() {
+//   var step = 0.0499;
+//   var fontSize = Math.round(window.innerWidth * step * 10) / 10;
+//   $HTML.css('font-size', fontSize + '%');
+// }
+// changeFontSize();
 
 /**
  * !Detects overlay scrollbars (when scrollbars on overflowed blocks are visible).
@@ -26,10 +26,10 @@ var TOUCHEVENTS = ("ontouchstart" in document.documentElement);
 var md = new MobileDetect(window.navigator.userAgent);
 var DEVICE = !!md.mobile() || !!md.tablet();
 if (DEVICE) {
-  
+
   $HTML.addClass('mobile-device');
   $('section').addClass('s-ready s-visible');
-  
+
 }
 
 /**
@@ -74,7 +74,7 @@ function fullPageInitial() {
     function sectionReady(destination) {
       var $section = $(destination.item);
       $section.addClass('s-ready');
-      if(destination.isLast) {
+      if (destination.isLast) {
         $section.prev().addClass('s-ready');
       }
     }
@@ -83,7 +83,7 @@ function fullPageInitial() {
       var $section = $(destination.item);
       $fpSections.removeClass('s-visible');
       $section.addClass('s-visible');
-      if(destination.isLast) {
+      if (destination.isLast) {
         $section.prev().addClass('s-visible');
       }
     }
@@ -203,7 +203,7 @@ function fullPageInitial() {
         }
 
       },
-      afterLoad: function(origin, destination, direction){
+      afterLoad: function (origin, destination, direction) {
         sectionReady(destination);
         $('.logo-js').on('click', function (e) {
           fullpage_api.moveTo(1);
@@ -213,7 +213,7 @@ function fullPageInitial() {
     });
 
     $('.btn-next-section-js').on('click', function (e) {
-      if($fpSections.length) {
+      if ($fpSections.length) {
         fullpage_api.moveSectionDown();
       }
       e.preventDefault();
@@ -221,7 +221,7 @@ function fullPageInitial() {
 
     $('.btn-to-section-js').on('click', function (e) {
       var $thisBtn = $(this);
-      if($fpSections.length) {
+      if ($fpSections.length) {
         fullpage_api.moveTo($($thisBtn.attr('href')).index() + 1);
       }
       e.preventDefault();
@@ -242,7 +242,7 @@ function placeholderInit() {
  * */
 function formElementState() {
   var $elem = $('.field-js');
-  
+
   if ($elem.length) {
     function toggleStateClass(mod, cond) {
       var $this = $(this);
@@ -372,7 +372,7 @@ $HTML.keyup(function (event) {
  * */
 function formValidation() {
   $.validator.setDefaults({
-    submitHandler: function() {
+    submitHandler: function () {
       alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.');
       return false;
     }
@@ -384,13 +384,13 @@ function formValidation() {
     var changeClasses = function (elem, remove, add) {
       // console.log('changeClasses');
       elem
-          .removeClass(remove).addClass(add);
+        .removeClass(remove).addClass(add);
       elem
-          .closest('form').find('label[for="' + elem.attr('id') + '"]')
-          .removeClass(remove).addClass(add);
+        .closest('form').find('label[for="' + elem.attr('id') + '"]')
+        .removeClass(remove).addClass(add);
       elem
-          .closest('.input-wrap')
-          .removeClass(remove).addClass(add);
+        .closest('.input-wrap')
+        .removeClass(remove).addClass(add);
     };
 
     $.each($form, function (index, element) {
@@ -416,38 +416,51 @@ function formValidation() {
  * !Parallax
  * */
 function scrollBanner() {
-  $(document).scroll(function(){
-      var scrollPos = $(this).scrollTop();
-      var transY = scrollPos / 2 + 'px';
-      $('.bg-title').css({'transform':'translateY(' + transY + ') rotate(90deg) '});
+  $(document).scroll(function () {
+    var scrollPos = $(this).scrollTop();
+    var transY = scrollPos / 2 + 'px';
+    $('.bg-title').css({
+      'transform': 'translateY(' + transY + ') rotate(90deg) '
+    });
   });
 }
+
 function scrollBannerUX() {
-  $(document).scroll(function(){
-      var scrollPos = $(this).scrollTop();
-      var transY = scrollPos / 3 + 'px';
-      $('.bg-title-ux').css({'transform':'translateY(' + transY + ') rotate(90deg) '});
+  $(document).scroll(function () {
+    var scrollPos = $(this).scrollTop();
+    var transY = scrollPos / 3 + 'px';
+    $('.bg-title-ux').css({
+      'transform': 'translateY(' + transY + ') rotate(90deg) '
+    });
   });
 }
 
 let arr = [];
-$('a[href^="#"]').click(function(){
+$('a[href^="#"]').click(function () {
   var target = $(this).attr('href');
   let a = $(this);
   arr.push(a);
-  
-  $(this).css({ "background-color": "#000", "color": "#fff"});
-  arr[arr.length-2].css({ "background-color": "#fff", "color": "#000"});
-  $('html, body').animate({scrollTop: $(target).offset().top}, 600);
-  return false;
-  });
 
-$WINDOW.on('resize', function () {
-  changeFontSize();
+  $(this).css({
+    "background-color": "#000",
+    "color": "#fff"
+  });
+  arr[arr.length - 2].css({
+    "background-color": "#fff",
+    "color": "#000"
+  });
+  $('html, body').animate({
+    scrollTop: $(target).offset().top
+  }, 600);
+  return false;
 });
 
+// $WINDOW.on('resize', function () {
+//   changeFontSize();
+// });
+
 $WINDOW.on('load', function () {
-  changeFontSize();
+  // changeFontSize();
   $HTML.addClass('page-loaded');
   $('.js-p-preloader').addClass('p-preloader_hide');
   $('.js-article').addClass('article-ready');
@@ -455,7 +468,7 @@ $WINDOW.on('load', function () {
 });
 
 $(document).ready(function () {
-  changeFontSize();
+  // changeFontSize();
   // Base
   addTouchClasses();
   fullPageInitial();
@@ -465,7 +478,7 @@ $(document).ready(function () {
   objectFitImages(); // object-fit-images initial
   // Common
   mainNavigation();
-  toggleActiveMenuItem();
+  // toggleActiveMenuItem();
 
   formValidation();
 

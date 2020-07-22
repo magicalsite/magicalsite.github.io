@@ -18,6 +18,18 @@ html {
   }
 }
 
+@media (min-height: 1081px) and (min-width: 1921px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (min-width: 2561px) {
+  html {
+    font-size: 100%;
+  }
+}
+
 body {
   min-width: $layout-page-min-width;
   @include font-normal;
@@ -41,10 +53,13 @@ body {
 // Отступы по бокам основных элементов на странице
 .layout-page-spaces {
   $intend: nth($layout-page-space, 2);
+
   padding: {
     left: $intend;
     right: $intend;
-  };
+  }
+
+  ;
 
   // ------ tab -----------------------------------------
   //@include media('<tab') {
@@ -70,10 +85,13 @@ body {
 .layout-page {
   box-sizing: content-box;
   max-width: $layout-page-max-width;
+
   margin: {
     left: auto;
     right: auto;
-  };
+  }
+
+  ;
 }
 
 
@@ -82,10 +100,13 @@ body {
 // Отступы по бокам текстовых элементов
 .layout-text-spaces {
   $intend: nth($layout-text-space, 2);
+
   padding: {
     left: $intend;
     right: $intend;
-  };
+  }
+
+  ;
 
   // ------ tab -----------------------------------------
   //@include media('<tab') {
@@ -110,10 +131,13 @@ body {
 .layout-text {
   box-sizing: content-box;
   max-width: $layout-text-width;
+
   margin: {
     left: auto;
     right: auto;
-  };
+  }
+
+  ;
 }
 
 
@@ -123,10 +147,13 @@ body {
 .layout-flood {
   box-sizing: content-box;
   max-width: $layout-flood-width;
+
   margin: {
     left: auto;
     right: auto;
-  };
+  }
+
+  ;
 }
 
 
