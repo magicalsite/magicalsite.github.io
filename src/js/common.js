@@ -5,12 +5,12 @@ var $WINDOW = $(window),
 /**
  * Change font size on resize
  */
-// function changeFontSize() {
-//   var step = 0.0499;
-//   var fontSize = Math.round(window.innerWidth * step * 10) / 10;
-//   $HTML.css('font-size', fontSize + '%');
-// }
-// changeFontSize();
+function changeFontSize() {
+  var step = 0.0499;
+  var fontSize = Math.round(window.innerWidth * step * 10) / 10;
+  $HTML.css('font-size', fontSize + '%');
+}
+changeFontSize();
 
 /**
  * !Detects overlay scrollbars (when scrollbars on overflowed blocks are visible).
